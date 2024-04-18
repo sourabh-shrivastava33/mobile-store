@@ -1,4 +1,4 @@
-# MERN Stack Coding Challenge: Product Transactions
+# MERN Stack Coding Challenge: CRUD OPERATION
 
 This project implements a MERN stack application to Perform CRUD operation over records (I am using mobile records).
 
