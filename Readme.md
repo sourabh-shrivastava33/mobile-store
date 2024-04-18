@@ -63,5 +63,5 @@ This project implements a MERN stack application to Perform CRUD operation over 
 7. **Run the application:**
 
    ```bash
-   npm run dev
+   npm run backend && npm run frontend
    ```
