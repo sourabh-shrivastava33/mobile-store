@@ -5,8 +5,9 @@ import { useNavigate } from "react-router-dom";
 import toast from "react-hot-toast";
 import Modal from "./Modal";
 import CreateEditProduct from "./CreateEditProduct";
+import Loader from "./Loader";
 const PhoneCard = ({ item }) => {
-  const [deleteProduct] = useDeletePhoneProductMutation();
+  const [deleteProduct, { isLoading }] = useDeletePhoneProductMutation();
   const navigate = useNavigate();
   async function handleDeleteProduct() {
     try {
@@ -51,7 +52,7 @@ const PhoneCard = ({ item }) => {
             className="px-4 py-2  rounded-md bg-red-800 text-gray-50 w-24  hover:bg-red-700 hover:text-gray-100 hover:shadow-md transition-all duration-300"
             onClick={handleDeleteProduct}
           >
-            Delete
+            {isLoading ? <Loader mutateButton /> : "Delete"}
           </button>
         </div>
       </div>

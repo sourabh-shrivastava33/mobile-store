@@ -1,5 +1,6 @@
 import CreateEditProduct from "../components/CreateEditProduct";
 import Header from "../components/Header";
+import Loader from "../components/Loader";
 import Modal from "../components/Modal";
 import PhoneItemsGrid from "../components/PhoneItemsGrid";
 const Homepage = () => {

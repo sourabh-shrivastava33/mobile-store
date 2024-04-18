@@ -6,6 +6,7 @@ import {
   useEditProductMutation,
 } from "../slices/phonesApiSlice";
 import toast from "react-hot-toast";
+import Loader from "./Loader";
 const CreateEditProduct = ({ onCloseModal, productToEdit }) => {
   const toEdit = Boolean(productToEdit?._id);
 
@@ -19,8 +20,9 @@ const CreateEditProduct = ({ onCloseModal, productToEdit }) => {
   const [imageUrl, setImageUrl] = useState(() =>
     toEdit ? productToEdit.image : ""
   );
-  const [addProduct] = useAddProductMutation();
-  const [editProduct] = useEditProductMutation();
+  const [addProduct, { isLoading: isAddingProduct }] = useAddProductMutation();
+  const [editProduct, { isLoading: isEditingProduct }] =
+    useEditProductMutation();
 
   async function handleSubmit(e) {
     e.preventDefault();
@@ -66,7 +68,7 @@ const CreateEditProduct = ({ onCloseModal, productToEdit }) => {
           onChange={(e) => setImageUrl(e.target.value)}
         />
         <button className="block w-full py-2 bg-gray-900 text-gray-50 rounded-lg font-semibold">
-          Submit
+          {isAddingProduct ? <Loader mutateButton /> : "Submit"}
         </button>
       </form>
       <button
