@@ -20,7 +20,7 @@ const PhoneDetailPage = () => {
               className="w-full object-cover block rounded-xl"
             />
           </div>
-          <div className="flex-grow p-8 bg-white h-[92.3%] self-center rounded-xl w-[50%]">
+          <div className="flex-grow p-8 bg-white h-[92.3%] self-center rounded-xl w-[50%] overflow-y-scroll">
             <p className="text-3xl font-semibold">{data?.phone?.title}</p>
             <p className="text-2xl mt-4 flex items-center gap-2">
               <span className="font-semibold">Price:-</span>

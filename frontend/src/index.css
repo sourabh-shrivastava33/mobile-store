@@ -1,3 +1,19 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+::-webkit-scrollbar {
+  @apply w-2; /* Set the width of the scroll bar */
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-gray-200; /* Set the color of the track */
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-gray-400 rounded-full; /* Set the color and shape of the thumb */
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-500; /* Set the color of the thumb on hover */
+}
